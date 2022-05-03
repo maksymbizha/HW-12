@@ -1,45 +1,478 @@
-.background{
-    height: 690px;
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #000000;
+}
+h2 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.container{
+    max-width: 1280px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+}
+
+.btn{
+    text-transform: capitalize;
+    border: 2px solid #ff2d2d;
+    border-radius: 5px;
+    padding: 13px 53px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/*  HEADER  */
+
+header{
+    padding-top: 30px;
     background-color: #f6f2f2;
 }
-.container{
-    max-width: 1250px;
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 40px;
-}
-nav{
-    text-align: center;
-    height: 84px;
+
+header nav{
     background-color: #313030;
 }
-a{
-    padding: 30px;
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+header a{
+    font-weight: bold;
+    text-transform: uppercase;
     color: white;
+    padding: 25px 30px;
     display: inline-block;
 }
-.home{
+
+header a:hover,
+header .active a{
     background-color: #ff3f40;
+    transition: .3s;
 }
-.clearfix{
-    content: '';
-    display: block;
-    clear: both;
+
+/*  ABOUT  */
+
+.about{
+    padding: 110px 0;
+    background-color: #f6f2f2;
 }
-.contant{
-    float: left;
+
+.about .row{
+    gap: 110px;
+    align-items: center;
+}
+
+.about .col{
     width: 50%;
-    padding: 100px 0;
+}
+
+.about .about__title{
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 65px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.about .about__description{
+     max-width: 515px;
+    margin-bottom: 60px;
+}
+
+.about .about_contact {
+    background-color: #ff2d2d;
+    color: white;
+}
+
+.about .about_contact:hover {
+    background-color: transparent;
+    color: #ff2d2d;
+    transition: .3s;
+}
+
+.about .about__video__wrapper iframe{
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 65px 1px black;
+}
+
+/*  SERVICE   */
+
+.service{
+    margin: 110px 0 110px 0;
+}
+
+.service__info{
+    width: 50%;
+}
+
+.service__info h2{
+    margin-bottom: 50px;
+}
+
+.service__info p{
+    max-width: 515px;
+    margin-bottom: 60px;
+}
+
+.service__contact{
+    background-color: #ffffff;
+    color: #ff2d2d;
+}
+
+.service__contact:hover {
+    background-color: #ff2d2d;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.service__elements{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service__item{
+    width: 50%;
+    padding-bottom: 40px;
+}
+
+.left{
+    padding-right:  50px;
+}
+
+.service__item h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.grey__line{
+    border-bottom: 3px solid #ececec;
+}
+
+/*  GALLERY  */
+
+.gallery{
+    margin-top: 105px;
+}
+
+.gallery__title{
+    text-align: center;
+    padding-bottom: 90px;
+}
+
+.gallery__text h2{
+    padding-bottom: 40px;
+}
+
+.gallery__text p{
+    padding-bottom: 30px;
 
 }
-input {
-    color: white;
-    padding: 5px 30px;
-    background-color: #ff2d2d;
-    font-size: 20px;
-    border-radius: 10px;
-    margin-top: 60px;
+.gallery__line{
+    border-bottom: 3px solid #ff2d2d;
+    max-width: 130px;
+    margin: 0 auto;
 }
-h1{
-    font-size: 60px;
+.photo__switch{
+    padding-bottom: 60px;
+}
+.photo__switch ul{
+    display: flex;
+    justify-content: center;
+}
+.photo__switch ul li{
+    padding-right: 50px;
+}
+.photo__switch ul li:last-of-type{
+    padding-right: 0;
+}
+.photo__switch ul li .all{
+    color: #ff6565;
+}
+.photo__switch ul li a{
+    font-size: 22px;
+    font-weight: 600;
+}
+.photo__switch ul li a:hover{
+    color: #ff6565;
+    transition: .3s;
+}
+
+.gallery__box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-bottom: 70px;
+}
+.box{
+    width: 23%;
+    height: 290px;
+    background-color: #f5f0dd;
+   }
+
+
+/*  TEAM  */
+
+.team{
+    padding: 65px 0 55px 0;
+}
+
+.team__title{
+}
+.team__title h2{
+    padding-bottom: 45px;
+}
+.team__title p{
+    max-width: 450px;
+    padding-bottom: 30px;
+}
+.team__line{
+    border-bottom: 3px solid #ff2d2d;
+    max-width: 130px;
+    margin-bottom: 75px;
+}
+
+.team__rectangle__parent{
+    width: 50%;
+}
+
+.team__rectangle__child{
+    background-color: #f5f0dd;
+    height: 460px;
+    width: 80%;
+}
+
+.name__surname h3{
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 26px;
+}
+.name__surname p{
+    padding-bottom: 30px;
+    width: 70%;
+}
+
+.mark__contact{
+    padding-bottom: 70px;
+}
+.mark__contact ul{
+    display: flex;
+}
+.mark__contact ul li{
+    padding-right: 40px;
+}
+.mark__contact ul li:last-child{
+    padding-right: 0;
+}
+.mark__contact ul a{
+    font-size: 18px;
+    font-weight: 400;
+}
+.mark__contact ul a:hover{
+    color: #ff6565;
+    transition: .10s;
+}
+
+.team__four__box{
+    display: flex;
+    gap: 21px;
+}
+.team__box{
+    background-color: #f5f0dd;
+    height: 215px;
+    width: calc(25% - 21px)
+}
+
+.team__box p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #f5f0dd;
+    padding: 5px 0;
+}
+.active-box p{
+    background-color: #7a786e;
+    color: white;
+}
+.team__box-mini{
+    padding-top: 176px;
+}
+.team__box p:hover{
+    transition: .5s;
+    background-color: #7a786e;
+    color: white;
+}
+
+/*  DELIVERY  */
+
+.delivery{
+    margin: 55px 0;
+    background-color: #f5f0dd;
+}
+.delivery__contant{
+    height: 515px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.delivery__text{
+    color: #fdfcf8;
+    text-align: center;
+
+}
+.delivery__text h2{
+    padding: 140px 0 40px 0;
+}
+
+.delivery__forma{
+    padding-top: 65px;
+}
+.delivery__forma-placeholder input{
+    text-transform: capitalize;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding-left: 30px;
+    font-size: 16px;
+    width: 520px;
+    height: 80px;
+    margin-right: 20px;
+}
+.delivery__forma-submit input{
+    text-transform: capitalize;
+    border: 2px solid #ff2d2d;
+    border-radius: 5px;
+    padding: 24px 53px;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #ff2d2d;
+    color: #ffffff;
+}
+.delivery__forma-submit input:hover{
+    background-color: transparent;
+    color: #ff2d2d;
+    transition: .3s;
+}
+
+/*  GIT  */
+.git{
+    padding-top: 55px;
+}
+.git__title{
+    width: 50%;
+}
+.git__title h2{
+    padding-bottom: 50px;
+}
+.git__title p{
+    padding-bottom: 60px;
+}
+.git__line{
+    border-bottom: 3px solid #ff2d2d;
+    max-width: 130px;
+    margin-bottom: 75px;
+}
+.git__form-info{
+
+}
+.git__form-name input,
+.git__form-mail input{
+    background-color: #d5d5d5;
+    padding: 30px 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: #d5d5d5;
+    margin: 0 30px 40px 0;
+}
+
+.git__form-message textarea{
+    background-color: #d5d5d5;
+    padding: 35px 0 0 50px;
+    border-radius: 10px;
+    border: #d5d5d5 ;
+    font-size: 18px;
+    resize: none;
+}
+
+.git__form-submit input{
+    color: #ffffff;
+    border:solid 3px red;
+    background-color: #ff2d2d;
+    border-radius: 10px;
+    padding: 20px 265px;
+    margin-top: 30px;
+}
+.git__form-submit input:hover{
+    background-color: transparent;
+    color: #ff2d2d;
+    transition: .3s;
+}
+.git__address{
+    background-color: #2d2d2d;
+    color: #d5d5d5;
+    line-height: 2.5;
+    height: 538px;
+    width: 100%;
+    padding: 140px 360px 0 80px;
+}
+.git__address h3{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+.git__address ul li a{
+    color: #d5d5d5;
+}
+.git__address ul li a:hover{
+    transition: .5s;
+    color: white;
+    font-size: 20px;
+}
+
+/*  FOOTER  */
+
+.footer{
+    margin-top: 110px;
+    height: 110px;
+    background-color: #313030;
+    color: white;
+}
+.footer__blok{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__copyright{
+    padding-top: 40px;
+}
+.footer__social-media{
+    padding-top: 40px;
+}
+.footer__social-media li{
+    padding-right: 15px;
+}
+.footer__social-media li:last-of-type{
+    padding-right: 0;
+}
+.footer__social-media li a img:hover{
+    transition: .8s;
+    height: 30px;
+    width: 30px
 }
