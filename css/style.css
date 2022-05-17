@@ -210,7 +210,7 @@ header .active a{
     color: #ff6565;
 }
 .photo__switch ul li a{
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
 }
 .photo__switch ul li a:hover{
@@ -508,158 +508,36 @@ header .active a{
 }
 
 
-
 /* ----- ADAPTIVE ----- */
 
-@media (max-width: 576px) {
-    .btn{
-        width: 100%;
-        display: inline-block;
-        text-align: center;
-    }
-}
 
-/*  ADAPTIVE  HEADER   */
-
-@media(max-width: 767px) {
-    .container {
-        max-width: 576px;
-    }
-    header nav ul {
-        display: initial;
-        text-align: center;
-    }
-}
-
-
-/*  ADAPTIVE  ABOUT  */
 @media (max-width: 1280px) {
     .container {
         max-width: 1024px;
     }
+
+/*  ADAPTIVE  ABOUT  */
     .about .about__title {
         font-size: 40px;
     }
-}
-
-@media (max-width: 1024px) {
-    .container {
-        max-width: 767px;
-    }
-    .about .row{
-        display: initial;
-    }
-    .about .col{
-        width: 100%;
-    }
-    .about .about__info{
-        padding-bottom: 100px;
-    }
-}
-@media (max-width: 576px){
-    .about .about__title {
-        font-size: 30px;
-    }
-}
 
 /*  ADAPTIVE  SERVICE   */
-
-@media (max-width: 1280px) {
-    .container{
-        max-width: 1024px;
-    }
     .service__info h2{
         font-size: 30px;
     }
     .service__info p{
         max-width: 400px;
     }
-}
-@media (max-width: 1024px) {
-    .container{
-        max-width: 767px;
-    }
-    .service .row{
-        display: initial;
-    }
-    .service__info,
-    .service__elements {
-        width: 100%;
-    }
-    .service__info{
-        margin-bottom: 100px;
-    }
-    .service__info h2{
-        font-size: 42px;
-    }
-    .service__info p{
-        max-width: initial;
-    }
-}
-@media(max-width: 576px) {
-
-    .service__elements{
-        display: initial;
-    }
-    .service__item{
-        width: 100%;
-    }
-}
-
 
 /*  ADAPTIVE  GALLERY   */
-
-@media (max-width: 1280px) {
-    .container{
-        max-width: 1024px;
-    }
     .photo__switch ul li{
         padding-right: 20px;
     }
     .gallery__text h2{
         font-size: 30px;
     }
-}
-@media (max-width: 1024px) {
-    .container {
-        max-width: 767px;
-    }
-    .box{
-        width: calc(33.33% - 10px);
-    }
-}
-@media(max-width: 767px) {
-    .container {
-        max-width: 576px;
-    }
-    .photo__switch ul li{
-        padding-right: 10px;
-    }
-    .photo__switch ul li a{
-        font-size: 16px;
-    }
-    .box{
-        width: calc(50% - 12px);
-    }
-}
-@media(max-width: 576px) {
-    .photo__switch ul{
-        display: initial;
-        text-align: center;
-    }
-    .photo__switch ul li{
-        padding-top: 20px;
-    }
-
-}
-
 
 /*  ADAPTIVE  TEEM   */
-
-@media (max-width: 1280px) {
-    .container{
-        max-width: 1024px;
-    }
     .team__rectangle__child{
         height: 485px;
     }
@@ -669,11 +547,66 @@ header .active a{
     .name__surname h3 {
         font-size: 24px;
     }
+
+/*  ADAPTIVE  BELIVERY   */
+    .delivery__text h2 {
+        font-size: 30px;
+    }
+    .delivery__forma-placeholder input{
+        height: 60px;
+        width: 370px;
+    }
+    .delivery__forma-submit input {
+        padding: 16px 30px;
+        font-size: 16px;
+    }
+/*  ADAPTIVE  GIT   */
+    .git__title h2{
+        font-size: 30px;
+    }
 }
+
+
 @media (max-width: 1024px) {
     .container {
         max-width: 767px;
     }
+/*  ADAPTIVE  ABOUT  */
+    .about .row {
+        display: initial;
+    }
+
+    .about .col {
+        width: 100%;
+    }
+
+    .about .about__info {
+        padding-bottom: 100px;
+    }
+/*  ADAPTIVE  SERVICE   */
+    .service .row {
+        display: initial;
+    }
+    .service__info,
+    .service__elements {
+        width: 100%;
+    }
+    .service__info {
+        margin-bottom: 100px;
+    }
+    .service__info h2 {
+        font-size: 42px;
+    }
+    .service__info p {
+        max-width: initial;
+    }
+
+/*  ADAPTIVE  GALLERY   */
+    .box{
+        width: calc(33.33% - 10px);
+    }
+
+/*  ADAPTIVE  TEEM   */
     .team .row{
         display: initial;
     }
@@ -681,10 +614,29 @@ header .active a{
         margin-bottom: 40px;
     }
 }
+
+
 @media(max-width: 767px) {
     .container {
         max-width: 576px;
     }
+    /*  ADAPTIVE  HEADER   */
+     header nav ul {
+        display: initial;
+        text-align: center;
+    }
+
+/*  ADAPTIVE  GALLERY   */
+    .photo__switch ul li{
+        padding-right: 10px;
+    }
+    .photo__switch ul li a{
+        font-size: 16px;
+    }
+    .box{
+        width: calc(50% - 12px);
+    }
+
     .team__rectangle__parent{
         width: 75%;
     }
@@ -704,83 +656,8 @@ header .active a{
         font-size: 12px;
         padding: 10px 0;
     }
-}
-@media(max-width: 576px) {
-    .team__rectangle__child{
-        width: 100%;
-    }
-    .team__title p{
-        width: initial;
-    }
-    .team__four__box{
-        flex-wrap: wrap;
-    }
-    .team__box {
-        width: calc(50% - 15px);
-    }
-    .mark__contact ul{
-        display: initial;
-    }
-    .mark__contact ul li{
-        padding-bottom: 10px;
-    }
-}
-
-
-/*  ADAPTIVE  BELIVERY   */
-
-@media (max-width: 1280px) {
-    .container{
-        max-width: 1024px;
-    }
-    .delivery__text h2 {
-        font-size: 30px;
-    }
-    .delivery__forma-placeholder input{
-        height: 60px;
-        width: 370px;
-    }
-    .delivery__forma-submit input {
-        padding: 16px 30px;
-        font-size: 16px;
-    }
-}
-@media(max-width: 576px) {
-    .delivery__forma .row{
-        display: initial;
-    }
-    .delivery__text h2 {
-        padding: 80px 0 30px 0;
-    }
-    .delivery__forma-placeholder input{
-        height: 60px;
-        width: 300px;
-        margin-right: 0;
-        padding-left: 0;
-        text-align: center;
-    }
-    .delivery__forma-submit input {
-        padding: 16px 30px;
-        font-size: 16px;
-        width: 100%;
-    }
-}
-
 
 /*  ADAPTIVE  GIT   */
-
-@media (max-width: 1280px) {
-    .container{
-        max-width: 1024px;
-    }
-    .git__title h2{
-        font-size: 30px;
-    }
-}
-@media(max-width: 767px) {
-    .container {
-        max-width: 576px;
-    }
     .git .git__form{
         display: initial;
     }
@@ -803,7 +680,72 @@ header .active a{
         background-color: white;
     }
 }
-@media(max-width: 576px) {
+
+
+@media (max-width: 576px) {
+    .btn{
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+/*  ADAPTIVE  ABOUT  */
+    .about .about__title {
+        font-size: 30px;
+    }
+/*  ADAPTIVE  SERVICE   */
+    .service__elements{
+        display: initial;
+    }
+    .service__item{
+        width: 100%;
+    }
+/*  ADAPTIVE  GALLERY   */
+    .photo__switch ul{
+        display: initial;
+        text-align: center;
+    }
+    .photo__switch ul li{
+        padding-top: 20px;
+    }
+/*  ADAPTIVE  TEEM   */
+    .team__rectangle__child{
+        width: 100%;
+    }
+    .team__title p{
+        width: initial;
+    }
+    .team__four__box{
+        flex-wrap: wrap;
+    }
+    .team__box {
+        width: calc(50% - 15px);
+    }
+    .mark__contact ul{
+        display: initial;
+    }
+    .mark__contact ul li{
+        padding-bottom: 10px;
+    }
+/*  ADAPTIVE  BELIVERY   */
+    .delivery__forma .row{
+        display: initial;
+    }
+    .delivery__text h2 {
+        padding: 80px 0 30px 0;
+    }
+    .delivery__forma-placeholder input{
+        height: 60px;
+        width: 300px;
+        margin-right: 0;
+        padding-left: 0;
+        text-align: center;
+    }
+    .delivery__forma-submit input {
+        padding: 16px 30px;
+        font-size: 16px;
+        width: 100%;
+    }
+/*  ADAPTIVE  GIT   */
     .git__form .row{
         display: initial;
     }
@@ -814,12 +756,7 @@ header .active a{
     .git__form-message textarea{
         font-size: 16px;
     }
-}
-
-
 /*  ADAPTIVE  FOOTER   */
-
-@media(max-width: 576px) {
     .footer__blok{
         align-items: center;
         flex-direction: column-reverse;
@@ -832,6 +769,8 @@ header .active a{
         font-size: 12px;
     }
 }
+
+
 
 
 
