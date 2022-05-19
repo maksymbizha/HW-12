@@ -199,13 +199,9 @@ header .active a{
 .photo__switch ul{
     display: flex;
     justify-content: center;
+    gap: 55px;
 }
-.photo__switch ul li{
-    padding-right: 50px;
-}
-.photo__switch ul li:last-of-type{
-    padding-right: 0;
-}
+
 .photo__switch ul li .all{
     color: #ff6565;
 }
@@ -227,7 +223,7 @@ header .active a{
     width: calc(25% - 12px);
     height: 290px;
     background-color: #f5f0dd;
-   }
+}
 
 
 /*  TEAM  */
@@ -332,9 +328,6 @@ header .active a{
 }
 .delivery__contant{
     height: 515px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .delivery__text{
     color: #fdfcf8;
@@ -350,6 +343,17 @@ header .active a{
 .delivery__forma{
     padding-top: 65px;
 }
+.delivery__forma .row{
+    justify-content: center;
+}
+.delivery__forma-placeholder{
+    width: 45%;
+}
+.delivery__forma-placeholder label,
+.delivery__forma-submit label{
+    display: inline-block;
+    width: 100%;
+}
 
 .delivery__forma-placeholder input{
     text-transform: capitalize;
@@ -359,7 +363,7 @@ header .active a{
     font-size: 16px;
     height: 80px;
     margin-right: 20px;
-    width: 520px;
+    width: 90%;
 }
 .delivery__forma-submit input{
     text-transform: capitalize;
@@ -530,9 +534,6 @@ header .active a{
     }
 
 /*  ADAPTIVE  GALLERY   */
-    .photo__switch ul li{
-        padding-right: 20px;
-    }
     .gallery__text h2{
         font-size: 30px;
     }
@@ -554,7 +555,7 @@ header .active a{
     }
     .delivery__forma-placeholder input{
         height: 60px;
-        width: 370px;
+
     }
     .delivery__forma-submit input {
         padding: 16px 30px;
@@ -592,26 +593,55 @@ header .active a{
         width: 100%;
     }
     .service__info {
-        margin-bottom: 100px;
-    }
-    .service__info h2 {
-        font-size: 42px;
+        margin-bottom: 50px;
     }
     .service__info p {
         max-width: initial;
     }
 
 /*  ADAPTIVE  GALLERY   */
+    .photo__switch ul{
+        gap: 35px;
+    }
+    .photo__switch ul li a{
+        font-size: 20px;
+    }
     .box{
-        width: calc(33.33% - 10px);
+        height: 180px;
     }
 
 /*  ADAPTIVE  TEEM   */
     .team .row{
         display: initial;
     }
+    .team__title p {
+        max-width: none;
+    }
     .team__rectangle__parent{
         margin-bottom: 40px;
+
+/*  ADAPTIVE  GIT   */
+    }
+    .git .git__form{
+        display: initial;
+    }
+    .git__title{
+        width: initial;
+    }
+    .git__form form{
+        width: initial;
+    }
+    .git__form-submit input{
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
+    .git__address{
+        width: initial;
+        padding: 20px 0 40px 60px;
+    }
+    .git .git__form:after{
+        display: none;
+        background-color: white;
     }
 }
 
@@ -620,23 +650,26 @@ header .active a{
     .container {
         max-width: 576px;
     }
-    /*  ADAPTIVE  HEADER   */
-     header nav ul {
-        display: initial;
-        text-align: center;
+/*  ADAPTIVE  HEADER   */
+     header nav{
+        display: none;
+    }
+    .about {
+        padding: 0;
     }
 
 /*  ADAPTIVE  GALLERY   */
-    .photo__switch ul li{
-        padding-right: 10px;
-    }
-    .photo__switch ul li a{
-        font-size: 16px;
+    .photo__switch ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
     }
     .box{
         width: calc(50% - 12px);
     }
 
+/*  ADAPTIVE  TEEM   */
     .team__rectangle__parent{
         width: 75%;
     }
@@ -647,16 +680,43 @@ header .active a{
         width: 100%;
     }
     .team__four__box{
-        gap: 15px;
+        gap: 8px;
     }
     .team__box{
-        width: calc(50% - 15px);
+        width: calc(25% - 12px);
+        height: 160px;
+    }
+    .team__box-mini {
+        padding-top: 122px;
     }
     .team__box p{
         font-size: 12px;
         padding: 10px 0;
     }
 
+    /*  DELIVERY  */
+    .delivery__text h2 {
+        padding: 80px 0 30px 0;
+    }
+    .delivery__forma {
+        padding-top: 45px;
+    }
+    .delivery__forma .row{
+        display: initial;
+    }
+    .delivery__forma-placeholder{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .delivery__forma-placeholder input{
+        text-align: center;
+        width: 100%;
+    }
+    .delivery__forma-submit input{
+        width: 100%;
+    }
+
+    
 /*  ADAPTIVE  GIT   */
     .git .git__form{
         display: initial;
@@ -688,10 +748,14 @@ header .active a{
         display: inline-block;
         text-align: center;
     }
+
+
 /*  ADAPTIVE  ABOUT  */
     .about .about__title {
         font-size: 30px;
     }
+
+
 /*  ADAPTIVE  SERVICE   */
     .service__elements{
         display: initial;
@@ -699,14 +763,8 @@ header .active a{
     .service__item{
         width: 100%;
     }
-/*  ADAPTIVE  GALLERY   */
-    .photo__switch ul{
-        display: initial;
-        text-align: center;
-    }
-    .photo__switch ul li{
-        padding-top: 20px;
-    }
+
+
 /*  ADAPTIVE  TEEM   */
     .team__rectangle__child{
         width: 100%;
@@ -720,31 +778,20 @@ header .active a{
     .team__box {
         width: calc(50% - 15px);
     }
+    .mark__contact {
+        padding-bottom: 35px;
+    }
     .mark__contact ul{
         display: initial;
+        text-align: center;
     }
     .mark__contact ul li{
         padding-bottom: 10px;
+        padding-right: 0;
     }
-/*  ADAPTIVE  BELIVERY   */
-    .delivery__forma .row{
-        display: initial;
-    }
-    .delivery__text h2 {
-        padding: 80px 0 30px 0;
-    }
-    .delivery__forma-placeholder input{
-        height: 60px;
-        width: 300px;
-        margin-right: 0;
-        padding-left: 0;
-        text-align: center;
-    }
-    .delivery__forma-submit input {
-        padding: 16px 30px;
-        font-size: 16px;
-        width: 100%;
-    }
+
+
+
 /*  ADAPTIVE  GIT   */
     .git__form .row{
         display: initial;
@@ -756,10 +803,12 @@ header .active a{
     .git__form-message textarea{
         font-size: 16px;
     }
+
+
 /*  ADAPTIVE  FOOTER   */
     .footer__blok{
         align-items: center;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .footer__copyright,
     .footer__social-media {
@@ -771,7 +820,26 @@ header .active a{
 }
 
 
+@media (max-width: 425px){
+    .service {
+        margin: 50px 0;
+    }
+    .gallery {
+        margin-top: 60px;
+        padding-bottom: 50px;
+    }
+    .team {
+        padding: 40px 0;
+    }
+    .delivery {
+        margin: 40px 0;
+    }
+    .git {
+        padding-top: 40px;
+    }
+    .footer {
+        margin-top: 65px;
+    }
 
-
-
+}
 
