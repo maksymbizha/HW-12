@@ -1,31 +1,99 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+    url('../assets/fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../assets/fonts/OpenSans-Bold.woff') format('woff'),
+    url('../assets/fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
+    url('../assets/fonts/OpenSans-ExtraBold.woff2') format('woff2'),
+    url('../assets/fonts/OpenSans-ExtraBold.woff') format('woff'),
+    url('../assets/fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Italic'), local('OpenSans-Italic'),
+    url('../assets/fonts/OpenSans-Italic.woff2') format('woff2'),
+    url('../assets/fonts/OpenSans-Italic.woff') format('woff'),
+    url('../assets/fonts/OpenSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+    url('../assets/fonts/OpenSans-SemiBold.woff2') format('woff2'),
+    url('../assets/fonts/OpenSans-SemiBold.woff') format('woff'),
+    url('../assets/fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root{
+    --accent-color: #ff2d2d;
+    --font-color: #ffffff;
+    --header-bg-color: #f6f2f2;
+    --main-bg-color: #313030;
+    --box-bg-color: #f5f0dd;
+
+
+    --font-sm: 16px;
+    --font-md: 18px;
+    --font-lg: 24px;
+    --font-xl: 30px;
+    --font-xxl: 42px;
+    --font-xxxl: 60px;
+
+
+    --template-content-width: 1250px;
+    --horizontal-offset: 15px;
+
+    --content-width: calc(var(--template-content-width) + calc(var(--horizontal-offset) * 2));
+}
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--font-sm);
+    color: #000000;
+}
+
+.container{
+    max-width: var(--content-width);
+    padding: 0 var(--horizontal-offset);
+    margin: 0 auto;
+}
 
 a{
     text-decoration: none;
     color: #000000;
 }
 
-body{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    color: #000000;
-}
-
-.container{
-    max-width: 1280px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
 .row{
     display: flex;
 }
 
 .btn{
     text-transform: capitalize;
-    border: 2px solid #ff2d2d;
+    border: 2px solid var(--accent-color);
     border-radius: 5px;
     padding: 13px 53px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: var(--font-md);
 }
 
 .cursor-button:hover{
@@ -37,11 +105,11 @@ body{
 
 header{
     padding-top: 30px;
-    background-color: #f6f2f2;
+    background-color: var(--header-bg-color);
 }
 
 header nav{
-    background-color: #313030;
+    background-color: var(--main-bg-color);
 }
 
 header nav ul{
@@ -52,14 +120,14 @@ header nav ul{
 header a{
     font-weight: bold;
     text-transform: uppercase;
-    color: white;
+    color:var(--font-color);
     padding: 25px 30px;
     display: inline-block;
 }
 
 header a:hover,
 header .active a{
-    background-color: #ff3f40;
+    background-color: var(--accent-color);
     transition: .3s;
 }
 
@@ -67,7 +135,7 @@ header .active a{
 
 .about{
     padding: 110px 0;
-    background-color: #f6f2f2;
+    background-color: var(--header-bg-color);
 }
 
 .about .row{
@@ -81,7 +149,7 @@ header .active a{
 
 .about .about__title{
     font-weight: 800;
-    font-size: 60px;
+    font-size:  var(--font-xxxl);
     line-height: 65px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -90,17 +158,17 @@ header .active a{
 
 .about .about__description{
      max-width: 515px;
-    margin-bottom: 60px;
+     margin-bottom: 60px;
 }
 
 .about .about_contact {
-    background-color: #ff2d2d;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--font-color);
 }
 
 .about .about_contact:hover {
     background-color: transparent;
-    color: #ff2d2d;
+    color: var(--accent-color);
     transition: .3s;
 }
 
@@ -122,7 +190,7 @@ header .active a{
 
 .service__info h2{
     margin-bottom: 50px;
-    font-size: 42px;
+    font-size: var(--font-xxl);
     font-weight: 700;
 }
 
@@ -132,13 +200,13 @@ header .active a{
 }
 
 .service__contact{
-    background-color: #ffffff;
-    color: #ff2d2d;
+    background-color: var(--font-color);
+    color: var(--accent-color);
 }
 
 .service__contact:hover {
-    background-color: #ff2d2d;
-    color: #ffffff;
+    background-color: var(--accent-color);
+    color: var(--font-color);
     transition: .3s;
 }
 
@@ -158,12 +226,12 @@ header .active a{
 }
 
 .service__item h3{
-    font-size: 24px;
+    font-size: var(--font-lg);
     font-weight: 600;
 }
 
 .grey__line{
-    border-bottom: 3px solid #ececec;
+    border-bottom: 3px solid var(--header-bg-color);
 }
 
 /*  GALLERY  */
@@ -180,7 +248,7 @@ header .active a{
 
 .gallery__text h2{
     padding-bottom: 40px;
-    font-size: 42px;
+    font-size: var(--font-xxl);
     font-weight: 700;
 }
 
@@ -189,7 +257,7 @@ header .active a{
 
 }
 .gallery__line{
-    border-bottom: 3px solid #ff2d2d;
+    border-bottom: 3px solid var(--accent-color);
     max-width: 130px;
     margin: 0 auto;
 }
@@ -203,14 +271,14 @@ header .active a{
 }
 
 .photo__switch ul li .all{
-    color: #ff6565;
+    color: var(--accent-color);
 }
 .photo__switch ul li a{
-    font-size: 24px;
+    font-size:  var(--font-lg);
     font-weight: 600;
 }
 .photo__switch ul li a:hover{
-    color: #ff6565;
+    color: var(--accent-color);
     transition: .3s;
 }
 
@@ -222,7 +290,7 @@ header .active a{
 .box{
     width: calc(25% - 12px);
     height: 290px;
-    background-color: #f5f0dd;
+    background-color:  var(--box-bg-color);
 }
 
 
@@ -236,7 +304,7 @@ header .active a{
 }
 .team__title h2{
     padding-bottom: 45px;
-    font-size: 42px;
+    font-size: var(--font-xxl);
     font-weight: 700;
 }
 .team__title p{
@@ -244,7 +312,7 @@ header .active a{
     padding-bottom: 30px;
 }
 .team__line{
-    border-bottom: 3px solid #ff2d2d;
+    border-bottom: 3px solid var(--accent-color);
     max-width: 130px;
     margin-bottom: 75px;
 }
@@ -254,13 +322,13 @@ header .active a{
 }
 
 .team__rectangle__child{
-    background-color: #f5f0dd;
+    background-color:  var(--box-bg-color);
     height: 460px;
     width: 80%;
 }
 
 .name__surname h3{
-    font-size: 30px;
+    font-size: var(--font-xl);
     font-weight: 600;
     padding-bottom: 26px;
 }
@@ -282,11 +350,11 @@ header .active a{
     padding-right: 0;
 }
 .mark__contact ul a{
-    font-size: 18px;
+    font-size: var(--font-md);
     font-weight: 400;
 }
 .mark__contact ul a:hover{
-    color: #ff6565;
+    color: var(--accent-color);
     transition: .10s;
 }
 
@@ -295,21 +363,21 @@ header .active a{
     gap: 21px;
 }
 .team__box{
-    background-color: #f5f0dd;
+    background-color:  var(--box-bg-color);
     height: 215px;
     width: calc(25% - 21px)
 }
 
 .team__box p{
     text-align: center;
-    font-size: 18px;
+    font-size: var(--font-md);
     font-weight: 600;
     color: #f5f0dd;
     padding: 5px 0;
 }
 .active-box p{
     background-color: #7a786e;
-    color: white;
+    color: var(--font-color);
 }
 .team__box-mini{
     padding-top: 176px;
@@ -317,7 +385,7 @@ header .active a{
 .team__box:hover p {
     transition: .5s;
     background-color: #7a786e;
-    color: white;
+    color: var(--font-color);
 }
 
 /*  DELIVERY  */
@@ -330,13 +398,13 @@ header .active a{
     height: 515px;
 }
 .delivery__text{
-    color: #fdfcf8;
+    color: var(--font-color);
     text-align: center;
 
 }
 .delivery__text h2 {
     padding: 140px 0 40px 0;
-    font-size: 42px;
+    font-size: var(--font-xxl);
     font-weight: 700;
 }
 
@@ -357,27 +425,27 @@ header .active a{
 
 .delivery__forma-placeholder input{
     text-transform: capitalize;
-    border: 2px solid white;
+    border: 2px solid var(--font-color);
     border-radius: 5px;
     padding-left: 30px;
-    font-size: 16px;
+    font-size: var(--font-sm);
     height: 80px;
     margin-right: 20px;
     width: 90%;
 }
 .delivery__forma-submit input{
     text-transform: capitalize;
-    border: 2px solid #ff2d2d;
+    border: 2px solid var(--accent-color);
     border-radius: 5px;
     padding: 24px 53px;
     font-weight: 700;
-    font-size: 18px;
-    background-color: #ff2d2d;
-    color: #ffffff;
+    font-size: var(--font-md);
+    background-color: var(--accent-color);
+    color: var(--font-color);
 }
 .delivery__forma-submit input:hover{
     background-color: transparent;
-    color: #ff2d2d;
+    color: var(--accent-color);
     transition: .3s;
 }
 
@@ -391,14 +459,14 @@ header .active a{
 }
 .git__title h2{
     padding-bottom: 50px;
-    font-size: 42px;
+    font-size: var(--font-xxl);
     font-weight: 700;
 }
 .git__title p{
     padding-bottom: 60px;
 }
 .git__line{
-    border-bottom: 3px solid #ff2d2d;
+    border-bottom: 3px solid var(--accent-color);
     max-width: 130px;
     margin-bottom: 75px;
 }
@@ -412,7 +480,7 @@ header .active a{
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #2d2d2d;
+    background-color: var(--main-bg-color);
     position: absolute;
     left: 100%;
 }
@@ -428,7 +496,7 @@ header .active a{
 }
 .git__form-info input{
     background-color: #d5d5d5;
-    font-size: 18px;
+    font-size: var(--font-md);
     border-radius: 10px;
     border: #d5d5d5;
     width: 100%;
@@ -440,16 +508,16 @@ header .active a{
     padding: 35px 0 0 50px;
     border-radius: 10px;
     border: #d5d5d5 ;
-    font-size: 18px;
+    font-size: var(--font-md);
     resize: none;
     height: 250px;
     width: 100%;
 }
 
 .git__form-submit input{
-    color: #ffffff;
-    border:solid 3px red;
-    background-color: #ff2d2d;
+    color: var(--font-color);
+    border:solid 3px var(--accent-color);
+    background-color: var(--accent-color);
     border-radius: 10px;
     width: 100%;
     padding: 25px 0;
@@ -457,28 +525,28 @@ header .active a{
 }
 .git__form-submit input:hover{
     background-color: transparent;
-    color: #ff2d2d;
+    color: var(--accent-color);
     transition: .3s;
 }
 .git__address{
-    background-color: #2d2d2d;
-    color: #d5d5d5;
+    background-color: var(--main-bg-color);
+    color: var(--font-color);
     line-height: 2.5;
     width: 35%;
     padding: 140px 0 0 80px;
 }
 .git__address h3{
-    font-size: 18px;
+    font-size: var(--font-md);
     font-weight: bold;
     padding-bottom: 40px;
 }
 .git__address ul li a{
-    color: #d5d5d5;
+    color: var(--font-color);
 }
 .git__address ul li a:hover{
     transition: .5s;
-    color: white;
-    font-size: 20px;
+    color: var(--font-color);
+    font-size: var(--font-md);
 }
 
 /*  FOOTER  */
@@ -486,8 +554,8 @@ header .active a{
 .footer{
     margin-top: 110px;
     height: 110px;
-    background-color: #313030;
-    color: white;
+    background-color: var(--main-bg-color);
+    color: var(--font-color);
 }
 .footer__blok{
     display: flex;
